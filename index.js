@@ -4,8 +4,14 @@ function RandomRed() {
     return "rgb(" + red + ", 100, 100)";
 }
 
+var i = 0;
 setInterval(() => {
-    app.style.backgroundcolor = "rgb(255,222,255)";
+    if (i % 2 == 0) {
+        app.style.backgroundcolor = RandomRed();
+    } else {
+        app.style.backgroundcolor = RandomBlue();
+    }
+    i++;
 }, 500);
 
 //B
